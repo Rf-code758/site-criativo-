@@ -1,23 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"\
-</head>
-<body>
- <header>RATOFLIX
-    <section>
-        <div>
-              <h1>venom 3 supera o primeiro filme
-                <p>#venom 3</p>
-              </h1>
-        </div>
+const movies = [
+  {
+    title: "Venom 3",
+    description: "O anti-herói simbiótico retorna para mais aventuras.",
+    image: "https://example.com/venom3.jpg", // Substitua por uma URL válida
+    trailer: "https://www.youtube.com/watch?v=exampleVenom3" // Substitua com o link do trailer
+  },
+  {
+    title: "Homem de Ferro",
+    description: "Tony Stark, um bilionário, se torna o Homem de Ferro após ser sequestrado.",
+    image: "https://example.com/homem-de-ferro.jpg", // Substitua por uma URL válida
+    trailer: "https://www.youtube.com/watch?v=exampleHomemDeFerro" // Substitua com o link do trailer
+  },
+  {
+    title: "Capitão América",
+    description: "Steve Rogers se transforma no super soldado Capitão América para combater os nazistas.",
+    image: "https://example.com/capitao-america.jpg", // Substitua por uma URL válida
+    trailer: "https://www.youtube.com/watch?v=exampleCapitaoAmerica" // Substitua com o link do trailer
+  }
+];
 
-    </section>
- </header>   
-</body>
-</html>
+// Função para renderizar a lista de filmes
+function displayMovies() {
+  const movieListContainer = document.getElementById('movie-list');
+  movies.forEach(movie => {
+    const movieElement = document.createElement('div');
+    movieElement.classList.add('movie');
+    movieElement.innerHTML = `
+      <img src="${movie.image}" alt="${movie.title}">
+      <h3>${movie.title}</h3>
+      <p>${movie.description}</p>
+      <a href="${movie.trailer}" target="_blank" class="trailer-link">Assistir ao Trailer</a>
+    `;
+    movieListContainer.appendChild(movieElement);
+  });
+}
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/c-1i96qpF-s?si=_wkahb1e3UH5fQ-L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+// Carregar os filmes na página
+window.onload = displayMovies;
