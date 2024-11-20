@@ -1,57 +1,72 @@
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Texto branco */
     margin: 0;
-  }
-  
-  .container {
+    padding: 0;
     text-align: center;
-  }
-  
-  h1 {
-    color: #333;
-  }
-  
-  #movie-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .movie {
-    background-color: white;
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-  }
-  
-  .movie img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .movie h3 {
-    color: #555;
-  }
-  
-  .trailer-link {
+}
+
+header {
+    background-color: #d00000; /* Vermelho do Venom */
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.movie-details {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 10px;
+    background-color: #1c1c1c; /* Escuro para contraste */
+    border-radius: 10px;
+}
+
+.trailer iframe {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.links a {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #d00000;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
+    margin-top: 15px;
     border-radius: 5px;
-  }
-  
-  .trailer-link:hover {
-    background-color: #0056b3;
-  }
+    font-size: 1.2em;
+}
+
+.links a:hover {
+    background-color: #ff3333; /* Efeito hover */
+}
+
+.movie-image img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    padding: 15px 0;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
   

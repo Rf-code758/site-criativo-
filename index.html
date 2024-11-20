@@ -1,39 +1,38 @@
-const movies = [
-  {
-    title: "Venom 3",
-    description: "O anti-herói simbiótico retorna para mais aventuras.",
-    image: "https://example.com/venom3.jpg", // Substitua por uma URL válida
-    trailer: "https://www.youtube.com/watch?v=exampleVenom3" // Substitua com o link do trailer
-  },
-  {
-    title: "Homem de Ferro",
-    description: "Tony Stark, um bilionário, se torna o Homem de Ferro após ser sequestrado.",
-    image: "https://example.com/homem-de-ferro.jpg", // Substitua por uma URL válida
-    trailer: "https://www.youtube.com/watch?v=exampleHomemDeFerro" // Substitua com o link do trailer
-  },
-  {
-    title: "Capitão América",
-    description: "Steve Rogers se transforma no super soldado Capitão América para combater os nazistas.",
-    image: "https://example.com/capitao-america.jpg", // Substitua por uma URL válida
-    trailer: "https://www.youtube.com/watch?v=exampleCapitaoAmerica" // Substitua com o link do trailer
-  }
-];
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicação de Filmes - Venom 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Indicação de Filmes: Venom 3</h1>
+    </header>
 
-// Função para renderizar a lista de filmes
-function displayMovies() {
-  const movieListContainer = document.getElementById('movie-list');
-  movies.forEach(movie => {
-    const movieElement = document.createElement('div');
-    movieElement.classList.add('movie');
-    movieElement.innerHTML = `
-      <img src="${movie.image}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
-      <p>${movie.description}</p>
-      <a href="${movie.trailer}" target="_blank" class="trailer-link">Assistir ao Trailer</a>
-    `;
-    movieListContainer.appendChild(movieElement);
-  });
-}
+    <section class="movie-details">
+        <h2>Venom 3: O Filme</h2>
+        <p>Prepare-se para mais uma aventura com Venom! O que acontece quando Eddie Brock e Venom enfrentam uma nova ameaça? Assista ao trailer abaixo para saber mais!</p>
+        
+        <div class="trailer">
+            <h3>Assista ao Trailer:</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XY2u7TlkPOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-// Carregar os filmes na página
-window.onload = displayMovies;
+        <div class="links">
+            <h3>Onde Assistir:</h3>
+            <a href="https://www.link-para-assistir-venom3-gratis.com" target="_blank" class="watch-link">Assistir Venom 3 de Graça</a>
+        </div>
+        
+        <div class="movie-image">
+            <h3>Imagem do Venom:</h3>
+            <img src="https://www.example.com/venom-image.jpg" alt="Venom" width="300">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 - Indicação de Filmes</p>
+    </footer>
+</body>
+</html>
