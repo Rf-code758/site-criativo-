@@ -1,15 +1,16 @@
-/* Definir cores do Venom */
+/* Definir cores do Venom e estilo preto e branco */
 :root {
-    --primary-color: #d50032; /* Vermelho */
-    --secondary-color: #121212; /* Preto */
-    --accent-color: #90a4ae; /* Cinza claro */
+    --primary-color: #d50032; /* Vermelho (para o RedFlix) */
+    --secondary-color: #000000; /* Preto */
+    --accent-color: #ffffff; /* Branco */
+    --gray-color: #555555; /* Tom de cinza para contrastar */
   }
   
   /* Estilos gerais */
   body {
     font-family: Arial, sans-serif;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--accent-color);
     margin: 0;
     padding: 0;
   }
@@ -21,7 +22,9 @@
   }
   
   header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin: 0;
   }
   
   nav ul {
@@ -35,7 +38,7 @@
   }
   
   nav ul li a {
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     font-size: 1.1rem;
   }
@@ -51,18 +54,22 @@
   
   h2 {
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .movie {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 10px;
   }
   
   .movie img {
     max-width: 300px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
   
   .movie-details {
@@ -73,11 +80,12 @@
   
   .movie-details p {
     font-size: 1.2rem;
+    color: var(--accent-color);
   }
   
   footer {
     background-color: var(--secondary-color);
-    color: var(--accent-color);
+    color: var(--gray-color);
     text-align: center;
     padding: 1rem;
     position: fixed;
